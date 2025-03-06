@@ -1,0 +1,2 @@
+# DecentralisedAI
+Bootcamp Encode Club
