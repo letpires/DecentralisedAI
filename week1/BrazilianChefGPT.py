@@ -70,6 +70,13 @@ elif any(keyword in dish.lower() for keyword in recipe_keywords):
         "content": f"Suggest me a detailed recipe and preparation steps for making {dish}."
     })
 
+else:
+    print("\n🚨 Invalid input! Please enter either:\n"
+          "- A list of ingredients (e.g., 'chicken, rice, onions')\n"
+          "- A dish name (e.g., 'feijoada recipe')\n"
+          "- A recipe critique request (e.g., 'I made feijoada, how can I improve it?')\n")
+
+
 
 # Call the OpenAI API to generate the initial response
 model = "gpt-4o"
