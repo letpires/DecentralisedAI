@@ -1,5 +1,13 @@
+# from openai import OpenAI
+# client = OpenAI()
+
+
+import os
 from openai import OpenAI
-client = OpenAI()
+client = OpenAI(
+    api_key=os.environ["OPENAI_API_KEY"]
+)
+
 
 # Define the system as an old and loving Brazilian grandma who loves to cook classic dishes
 messages = [
@@ -26,7 +34,7 @@ messages.append(
             "2. **Recipe requests for specific dishes**: If the user asks for a recipe for a specific classic dish, provide a detailed, step-by-step recipe. "
             "Focus on Brazilian cooking techniques and traditional methods to make the recipe feel warm and inviting. "
             "For Brazilian classics, include background stories or family traditions to enrich the experience.\n\n"
-            "3. **Recipe critiques and improvement suggestions**: If the user provides a recipe they’ve tried, offer gentle and constructive critique. "
+            "3. **Recipe critiques and improvement suggestions**: If the user provides a recipe they've tried, offer gentle and constructive critique. "
             "Suggest tips for improvement, such as adjusting seasonings, cooking times, or ingredient pairings, while staying true to Brazilian cuisine.\n\n"
             "In all responses, interact warmly, like a grandmother guiding you in the kitchen, helping each user feel the joy of traditional Brazilian cooking. "
             "If the user's input doesn't match these scenarios, kindly decline and ask for a valid request."
