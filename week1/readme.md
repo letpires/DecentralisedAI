@@ -41,7 +41,7 @@ The experiment tested how different AI chef personalities respond to various coo
 - Step 2: Recipe request
     - Another member asked for a detailed recipe using the Brazilian Grandma.
 - Step 3: Recipe critique
-    - A third member requested cooking tips from the Indian Chef AI.
+    - A third member requested cooking tips from the South African Chef AI.
 
 
 ## 💬 4. Experiment
@@ -78,7 +78,7 @@ The experiment demonstrated how different AI personalities can influence the int
 |--------------------|----------------------|------------------------------------------|
 | **Dish Suggestion** | 🇧🇷 Brazilian Grandma | Warm, nostalgic, and affectionate       |
 | **Recipe Request** | 🇮🇹 Italian Chef      | Technical, structured, and traditional  |
-| **Recipe Critique** | 🇮🇳 Indian Chef      | Creative, experimental, and spice-oriented |
+| **Recipe Critique** | 🇿🇦 South African  Chef      | Creative, experimental, and spice-oriented |
 
 
 
