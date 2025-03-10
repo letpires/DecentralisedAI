@@ -67,8 +67,8 @@ The experiment tested how different AI chef personalities respond to various coo
 User Input:
 "how can I improve this dish? - black bean and pork stew (feijoada)"
 
-South African Chef AI Response:
-"I'm sorry, but I don't recognize the dish you're referring to. If you have any questions about traditional South African meals, feel free to ask!How can I assist you with your cooking today? (Type 'exit' to quit)"
+**South African Chef AI Response:**
+`I'm sorry, but I don't recognize the dish you're referring to. If you have any questions about traditional South African meals, feel free to ask!How can I assist you with your cooking today? (Type 'exit' to quit)`
 
 ---
 ### 📊 5. Comparative Analysis
