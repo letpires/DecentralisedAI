@@ -18,6 +18,8 @@ Currently, this project includes the following AI chefs:
 
 **2. Italian Chef 👨‍🍳🇮🇹** - A former AI and Decentralized Finance researcher from Puglia, now a retired chef who blends his passion for cooking with metaphors from AI and blockchain, offering detailed recipes, cooking tips, and tech-inspired culinary wisdom.
 
+**3. South African Chef 👨‍🍳🇿🇦** - An experienced chef from South Africa who helps people by suggesting detailed recipes for dishes they want to cook. Specializing in traditional South African cuisine, this chef provides expert cooking tips and engaging, precise, and clear guidance to bring authentic flavors to your table.
+
 However, you can create new AI chefs by modifying the prompts! Examples of future chefs could include:
 - 🍣 Japanese Sushi Master – Expert in precise techniques and seafood handling.
 - 🌮 Mexican Street Food Vendor – Specializing in tacos, salsas, and traditional spices.
