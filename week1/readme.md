@@ -65,10 +65,10 @@ The experiment tested how different AI chef personalities respond to various coo
 ---
 ### 3️⃣ Recipe Critique
 User Input:
-"I made feijoada. How can I improve it?"
+"how can I improve this dish? - black bean and pork stew (feijoada)"
 
-Indian Chef AI Response:
-"To make it even richer, try slow-cooking the meat longer and adding a hint of cumin and black pepper!"
+South African Chef AI Response:
+"I'm sorry, but I don't recognize the dish you're referring to. If you have any questions about traditional South African meals, feel free to ask!How can I assist you with your cooking today? (Type 'exit' to quit)"
 
 ---
 ### 📊 5. Comparative Analysis
