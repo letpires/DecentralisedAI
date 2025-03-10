@@ -9,7 +9,9 @@ client = OpenAI(
 )
 
 
-# Define the system as an old and loving Brazilian grandma who loves to cook classic dishes
+# Sets the chatbot’s personality as a Brazilian grandma who is warm and experienced in traditional Brazilian cooking.
+# Encourages the AI to use friendly phrases (e.g., "Meu anjo", "Ah, que delícia!") and family-centered storytelling.
+# Defines its expertise in traditional Brazilian cuisine.
 messages = [
     {
         "role": "system",
@@ -24,6 +26,11 @@ messages = [
 ]
 
 # Define the grandma's expertise in responding to three specific types of user inputs
+# Three specific response types:
+# Ingredient-based suggestions → AI suggests Brazilian dishes based on given ingredients.
+# Recipe requests → AI provides detailed step-by-step recipes.
+# Recipe critiques → AI gives gentle feedback with tips for improvement.
+# Ensures the AI only responds to relevant cooking-related inputs.
 messages.append(
     {
         "role": "system",
@@ -42,14 +49,28 @@ messages.append(
     }
 )
 
+# Receiving User Input
 dish = input("Enter ingredients, a dish name, or a recipe for critique:\n")
+# Prompts the user to enter either:
+# A list of ingredients (for dish suggestions),
+# A dish name (for a full recipe),
+# A recipe critique request (to improve an existing recipe).
 
-
+# Identifying the Type of User Input
 ingredient_keywords = [",", " and ", " with "]
 recipe_keywords = ["recipe", "method", "steps", "instructions"]
 critique_keywords = ["improve", "fix", "feedback", "critique", "enhance"]
 
+# Defines keyword lists to categorize user input:
+# ingredient_keywords → Used to detect ingredient lists.
+# recipe_keywords → Used to identify recipe requests.
+# critique_keywords → Used to detect requests for recipe feedback.
+
+
+
 # Case 1: Ingredient-based suggestion
+# Checks if the input contains ingredient-related keywords.
+# If true, adds a user message asking for dish suggestions.
 if any(keyword in dish.lower() for keyword in ingredient_keywords):
     messages.append({
         "role": "user",
@@ -57,6 +78,8 @@ if any(keyword in dish.lower() for keyword in ingredient_keywords):
     })
     
 # Case 2: Recipe critique
+# Checks if the input contains critique-related keywords.
+# If true, adds a user message requesting feedback.
 elif any(keyword in dish.lower() for keyword in critique_keywords):
     messages.append({
         "role": "user",
@@ -64,12 +87,15 @@ elif any(keyword in dish.lower() for keyword in critique_keywords):
     })
     
 # Case 3: Specific dish recipe request
+# Checks if the input is a recipe request.
+# If true, asks the AI for a full step-by-step recipe.
 elif any(keyword in dish.lower() for keyword in recipe_keywords):
     messages.append({
         "role": "user",
         "content": f"Suggest me a detailed recipe and preparation steps for making {dish}."
     })
 
+# If the input doesn’t match any category, it displays an error message and suggests valid formats.
 else:
     print("\n🚨 Invalid input! Please enter either:\n"
           "- A list of ingredients (e.g., 'chicken, rice, onions')\n"
@@ -78,7 +104,9 @@ else:
 
 
 
-# Call the OpenAI API to generate the initial response
+# Calls the OpenAI API with the selected GPT-4o model.
+# Uses stream=True to receive responses in real-time.
+
 model = "gpt-4o"
 
 stream = client.chat.completions.create(
@@ -87,6 +115,10 @@ stream = client.chat.completions.create(
     stream=True,
 )
 
+# Displaying the AI Response
+# Iterates over the response stream and prints it as it arrives.
+# Saves the response in collected_messages for context retention.
+
 collected_messages = []
 for chunk in stream:
     chunk_message = chunk.choices[0].delta.content or ""
@@ -94,9 +126,13 @@ for chunk in stream:
     collected_messages.append(chunk_message)
 
 # Store the response in the message history
+# Adds the AI’s response to the conversation history to maintain context.
 messages.append({"role": "system", "content": "".join(collected_messages)})
 
 # Loop to continue interacting with the user
+# Creates an infinite loop where the user can keep interacting with the AI.
+# Each new question updates the conversation history.
+# The AI remembers past interactions, creating a dynamic and engaging conversation.
 while True:
     print("\n")
     user_input = input("Ask grandma another question (ingredients, recipe, critique):\n")
