@@ -1,10 +1,10 @@
-# AI Joke Generator
+# 🤖 AI Joke Generator
 
 A modern web application that leverages OpenAI's GPT models to generate personalized, AI-powered jokes. Built with Next.js, TypeScript, and Tailwind CSS, this application offers an interactive and engaging way to create humor tailored to your preferences.
 
 The app not only generates jokes but also employs AI to evaluate the quality, appropriateness, and humor level of each generated joke. With its intuitive interface, users can fine-tune parameters like topic, tone, and creativity level to craft the perfect joke for any occasion.
 
-## Features
+## ✨ Features
 
 - 🎭 **Customizable Joke Generation**: Generate unique jokes with customizable parameters
   - Topic selection (work, people, animals, food, television, etc.)
@@ -18,13 +18,13 @@ The app not only generates jokes but also employs AI to evaluate the quality, ap
 - 💫 **Real-time Generation**: Instant joke generation and display on the same page
 - 🎨 **Modern UI**: Clean and intuitive user interface
 
-## Prerequisites
+## 📋 Prerequisites
 
 Before you begin, ensure you have installed:
 - Node.js (version 18 or higher)
 - npm or yarn
 
-## Getting Started
+## 🚀 Getting Started
 
 1. Clone the repository:
 ```bash
@@ -52,9 +52,9 @@ yarn dev
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Usage
+## 📖 Usage
 
-### Configure Joke Parameters
+### 🎛️ Configure Joke Parameters
 
 1. **Select Topic**
    - Choose from a variety of topics in the dropdown menu
@@ -73,7 +73,7 @@ yarn dev
    - Lower values (0.1-0.5): More predictable, conventional jokes
    - Higher values (0.6-1.0): More creative, unexpected results
 
-### Generate and View Jokes
+### 🎯 Generate and View Jokes
 
 1. **Generate New Joke**
    - Click the "Generate Joke" button
@@ -86,8 +86,7 @@ yarn dev
      - Appropriateness level
      - Potential offensive content
 
-
-## Project Structure
+## 🏗️ Project Structure
 
 ```
 ├── app/
@@ -98,7 +97,7 @@ yarn dev
 └── styles/           # CSS styles
 ```
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - [Next.js 15.2](https://nextjs.org/)
 - [React 19](https://react.dev/)
@@ -106,11 +105,15 @@ yarn dev
 - [Tailwind CSS](https://tailwindcss.com/)
 - TypeScript
 
-## Contributing
+## 👥 Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+## 📄 License
+
+// ... existing license ...
 
