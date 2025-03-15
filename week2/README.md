@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Joke Generator
+
+A modern web application that leverages OpenAI's GPT models to generate personalized, AI-powered jokes. Built with Next.js, TypeScript, and Tailwind CSS, this application offers an interactive and engaging way to create humor tailored to your preferences.
+
+The app not only generates jokes but also employs AI to evaluate the quality, appropriateness, and humor level of each generated joke. With its intuitive interface, users can fine-tune parameters like topic, tone, and creativity level to craft the perfect joke for any occasion.
+
+## Features
+
+- 🎭 **Customizable Joke Generation**: Generate unique jokes with customizable parameters
+  - Topic selection (work, people, animals, food, television, etc.)
+  - Tone selection (witty, sarcastic, silly, dark, goofy)
+  - Joke type (pun, knock-knock, story)
+  - Temperature control for creativity level
+- 🎯 **AI Joke Evaluation**: Automatic assessment of generated jokes for:
+  - Humor level
+  - Appropriateness
+  - Potential offensiveness
+- 💫 **Real-time Generation**: Instant joke generation and display on the same page
+- 🎨 **Modern UI**: Clean and intuitive user interface
+
+## Prerequisites
+
+Before you begin, ensure you have installed:
+- Node.js (version 18 or higher)
+- npm or yarn
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+```bash
+git clone <your-repository-url>
+```
 
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Create a `.env.local` file in the root directory and add your OpenAI API key:
+```
+OPENAI_API_KEY=your_api_key_here
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Configure Joke Parameters
 
-## Learn More
+1. **Select Topic**
+   - Choose from a variety of topics in the dropdown menu
+   - Options include work, people, animals, food, television, and more
 
-To learn more about Next.js, take a look at the following resources:
+2. **Choose Tone**
+   - Select the desired tone for your joke
+   - Available options: witty, sarcastic, silly, dark, goofy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Pick Joke Type**
+   - Choose from different joke formats
+   - Types include: pun, knock-knock, story
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Adjust Creativity**
+   - Use the temperature slider to control the AI's creativity level
+   - Lower values (0.1-0.5): More predictable, conventional jokes
+   - Higher values (0.6-1.0): More creative, unexpected results
 
-## Deploy on Vercel
+### Generate and View Jokes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Generate New Joke**
+   - Click the "Generate Joke" button
+   - Wait briefly while the AI creates and evaluates the joke
+   - The generated joke will appear on your screen
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **View Evaluation Results**
+   - See automatic assessment of:
+     - Humor rating
+     - Appropriateness level
+     - Potential offensive content
+
+
+## Project Structure
+
+```
+├── app/
+│   ├── components/     # React components
+│   ├── api/           # API routes
+│   └── page.tsx       # Main page
+├── public/            # Static files
+└── styles/           # CSS styles
+```
+
+## Technologies Used
+
+- [Next.js 15.2](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [OpenAI API](https://openai.com/api/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- TypeScript
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
