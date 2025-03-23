@@ -305,7 +305,7 @@ export default function Chat() {
                 characterDetails
                   ? ` with the following characters:\n${characterDetails}`
                   : ""
-              }`;
+              }.\n\nAfter the story, please add a summary of each character's role in the plot.`;
 
               append({ role: "user", content: prompt });
             }}
