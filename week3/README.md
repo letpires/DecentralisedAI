@@ -34,7 +34,7 @@ To use models running locally for story generation, follow these steps:
 
 2. Activate the flags in session API and OpenAI. Ensure that the necessary flags are activated in both the session API and OpenAI configurations.
 
-3. Load the model: Load the desired model by specifying its name. For example, to load the HuggingFaceTB_SmolLM2-1.7B-Instruct model, configure it accordingly.
+3. Load the model: Load the desired model by specifying its name. For example, to load the `HuggingFaceTB_SmolLM2-1.7B-Instruct` model, configure it accordingly.
 
 4. Run the page: Finally, run the page on your local server:
 
