@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
 import { OnchainInferenceService } from '@/app/services/onchain-inference';
+import { TokenPaymentService } from '@/app/services/token-payment-service';
 
 const inferenceService = new OnchainInferenceService();
+const tokenService = new TokenPaymentService();
 
 export async function POST(req: Request) {
   try {
@@ -14,6 +16,16 @@ export async function POST(req: Request) {
       );
     }
 
+    // Process payment with tokens
+    try {
+      await tokenService.payForJoke();
+    } catch (paymentError) {
+      return NextResponse.json(
+        { error: 'Payment failed. Please check your token balance.' },
+        { status: 402 }
+      );
+    }
+
     const { joke, evaluation } = await inferenceService.generateJoke(topic, tone, type);
     
     return NextResponse.json({ joke, evaluation });
@@ -21,8 +33,8 @@ export async function POST(req: Request) {
   } catch (error) {
     console.error('Error generating joke:', error);
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : 'Failed to generate joke' }, 
+      { error: error instanceof Error ? error.message : 'Failed to generate joke' },
       { status: 500 }
     );
   }
-} 
+}

@@ -9,22 +9,40 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^4.9.0",
     "ai": "^4.1.61",
-    "ethers": "^5.8.0",
-    "next": "15.2.2",
+    "next": "^15.2.2",
     "openai": "^4.87.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
     "@tailwindcss/postcss": "^4",
+    "@types/lru-cache": "^7.10.9",
+    "@types/next": "^8.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^16.0.0",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
+    "ethers": "^6.13.5",
+    "hardhat": "^2.18.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "constructor": {
+    "DEFAULT_SEPOLIA_RPC": "https://rpc.sepolia.org",
+    "SEPOLIA_CHAIN_ID": 11155111,
+    "rpcUrl": "process.env.RPC_URL || DEFAULT_SEPOLIA_RPC",
+    "provider": "new ethers.JsonRpcProvider(rpcUrl, SEPOLIA_CHAIN_ID)",
+    "wallet": "new ethers.Wallet(process.env.PRIVATE_KEY!, this.provider)",
+    "TOKEN_CONTRACT_ADDRESS": "process.env.TOKEN_CONTRACT_ADDRESS!",
+    "PAYMENT_CONTRACT_ADDRESS": "process.env.PAYMENT_CONTRACT_ADDRESS!",
+    "tokenContract": "new ethers.Contract(TOKEN_CONTRACT_ADDRESS, TOKEN_ABI, this.wallet)",
+    "paymentContract": "new ethers.Contract(PAYMENT_CONTRACT_ADDRESS, PAYMENT_ABI, this.wallet)"
   }
 }
